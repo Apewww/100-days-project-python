@@ -27,9 +27,12 @@ def load_recipe(file_path):
         with open(file_path, "r") as file:
             content = file.read()
             recipes = content.split("\n\n")
+            # print("RESEPPP:",recipes)
             recipe_dict = {}
             for recipe in recipes:
                 lines = recipe.strip().split("\n")
+                # print("Lines:",lines)
+                # print("Len Linesss:",len(lines))
                 if len(lines) >= 3:
                     name = lines[0].strip()
                     ingredients = lines[1].replace('Ingredients: ','').strip()
