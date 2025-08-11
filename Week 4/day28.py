@@ -69,20 +69,25 @@ class ATM:
     def __init__(self):
         self.account = {}
         
+    # Validate Data
+    def validate_account(self, account_number):
+        for akun in self.account:
+            if account_number == akun:
+                return True
+        return False
+        
     # Create Account
     def create_account(self):
         account_number = input("Enter account number: ")
         pin = input("Set a 4-digit PIN: ")
-        # print(len(pin))
+        if self.validate_account(account_number):
+            print("Account Number already exists")
+            return False
         if len(pin) == 4 and pin.isdigit():
             self.account[account_number] = BankAccount(account_number, pin)
             print("Account Created Successfully")
         else:
             print("Invalid PIN, Ensure it's 4 digits")
-        # for akun in self.account:
-        #     print(akun)
-        #     if akun == '1111':
-        #         print("Hi, I'm here !")
             
     # Authentication Account
     def authenticate_account(self):
