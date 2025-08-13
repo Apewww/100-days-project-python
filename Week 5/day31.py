@@ -40,25 +40,26 @@
 # root.mainloop()
 
 # Displaying Dynamic Results
-import tkinter as tk
+# import tkinter as tk
 
-root = tk.Tk()
-root.title("Displaying Dynamic Results")
-root.geometry("300x200")
+# root = tk.Tk()
+# root.title("Displaying Dynamic Results")
+# root.geometry("300x200")
 
-entry = tk.Entry(root)
-entry.pack(pady=10)
+# entry = tk.Entry(root)
+# entry.pack(pady=10)
 
-result_label = tk.Label(root, text="Result will be displayed here.")
-result_label.pack(pady=10)
+# result_label = tk.Label(root, text="Result will be displayed here.")
+# result_label.pack(pady=10)
 
-def update_label():
-    text = entry.get()
-    result_label.config(text=f"You entered: {text}")
+# def update_label():
+#     text = entry.get()
+#     result_label.config(text=f"You entered: {text}")
     
-button = tk.Button(root, text="Update Label", command=update_label)
-button.pack(pady=10)
+# button = tk.Button(root, text="Update Label", command=update_label)
+# button.pack(pady=10)
 
-root.mainloop()Using Entry Widget with Labels and Buttonssssssssszzz
+# root.mainloop()
 
+# Using Entry Widget with Labels and Buttons
 # Day 31 Project: BMI Calculator
